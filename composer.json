@@ -1,0 +1,38 @@
+{
+  "name": "ms/datapage-sdk-laravel",
+  "description": "Datapage SDK",
+  "authors": [
+    {
+      "name": "Márcio Winicius",
+      "email": "marciowinicius.mw@gmail.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Datapage\\DatapageSDK\\": [
+        "src/Application"
+      ]
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Datapage\\DatapageSDK\\Providers\\DatapageSDKProvider"
+      ],
+      "aliases": {
+        "DatapageSDK": "Datapage\\DatapageSDK\\Facades\\DatapageSDK",
+        "HttpClient": "Datapage\\DatapageSDK\\Facades\\HttpClient",
+        "OAuthClient": "Datapage\\DatapageSDK\\Facades\\OAuthClient"
+      }
+    }
+  },
+  "require": {
+    "php": ">=7.0"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "~5.7"
+  },
+  "config": {
+    "bin-dir": "bin/"
+  }
+}
